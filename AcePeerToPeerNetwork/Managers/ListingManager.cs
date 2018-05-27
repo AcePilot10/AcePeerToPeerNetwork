@@ -1,5 +1,6 @@
 ﻿using AcePeerToPeerNetwork.Models;
 using AcePeerToPeerNetwork.Util;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,9 +57,10 @@ namespace AcePeerToPeerNetwork.Managers
         /// Creates a listing and saves to database.
         /// </summary>
         /// <param name="listing">The listing to be created</param>
-        public void CreateListing(Listing listing)
+        public async Task<PushResponse> CreateListing(Listing listing)
         {
-            listings.Add(listing);
+             var response = await DatabaseAccessor.Instance.GetClient().PushAsync("Listings", listing);
+            return response;
         }
 
         /// <summary>
@@ -76,6 +78,15 @@ namespace AcePeerToPeerNetwork.Managers
             {
                 return new List<Listing>();
             }
+        }
+
+        /// <summary>
+        /// Generates a random id
+        /// </summary>
+        /// <returns>ID</returns>
+        public int GenerateUID()
+        {
+            return new Random().Next(0, 1000);
         }
         #endregion
     }

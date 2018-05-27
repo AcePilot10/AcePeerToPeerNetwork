@@ -9,191 +9,6 @@
         Title="Ace Peer To Peer Network" Height="450" Width="800"
         Loaded="Window_Loaded">
 
-    <!--
-    <Grid Name="gridContainer">
-      
-    **Menu Bar**
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File">
-                    <MenuItem Header="_Open"/>
-                    <MenuItem Header="_Close"/>
-                    <MenuItem Header="_Save"/>
-                </MenuItem>
-            </Menu>
-            <StackPanel></StackPanel>
-        </DockPanel>
-    
-    **Register**
-        <StackPanel 
-            Background="Red"
-            Name="screenSignup"
-            Margin="15"
-            Visibility="Hidden">
-
-            <Grid Name="gridRegisterEmail">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label 
-                    Content="Email:" 
-                    HorizontalContentAlignment="Right" 
-                    Background="blue" 
-                    Grid.Column="0"
-                    FontSize="20"
-                    Name="lblRegisterEmail"/>
-                <TextBox 
-                    Background="green"
-                    Grid.Column="1"
-                    Name="txtRegisterEmail"/>
-            </Grid>
-
-            <Grid Name="gridRegisterUsername">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label 
-                    Content="Username:" 
-                    HorizontalContentAlignment="Right" 
-                    Background="blue" 
-                    Grid.Column="0"
-                    FontSize="20"
-                    Name="lblRegisterUsername"/>
-                <TextBox 
-                    Background="green"
-                    Grid.Column="1"
-                    Name="txtRegisterUsername"/>
-            </Grid>
-
-            <Grid Name="gridRegisterPassword">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label 
-                    Content="Password:" 
-                    HorizontalContentAlignment="Right" 
-                    Background="blue" 
-                    Grid.Column="0"
-                    FontSize="20"
-                    Name="lblRegisterPassword"/>
-                <TextBox 
-                    Background="green"
-                    Grid.Column="1"
-                    Name="txtRegisterPassword"/>
-            </Grid>
-
-            <Button 
-                Content="Register" 
-                Width="100"
-                Height="45"
-                Name="btnRegisterRegister"/>
-
-        </StackPanel>
-    **Login**       
-        <StackPanel 
-            Background="Red"
-            Name="screenLogin"
-            Margin="15"
-            Visibility="Hidden">
-
-            <Grid Name="gridLoginEmail">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label 
-                    Content="Email:" 
-                    HorizontalContentAlignment="Right" 
-                    Background="blue" 
-                    Grid.Column="0"
-                    FontSize="20"
-                    Name="lblLoginEmail"/>
-                <TextBox 
-                    Background="green"
-                    Grid.Column="1"
-                    Name="txtLoginEmail"/>
-            </Grid>
-
-            <Grid Name="gridLoginPassword">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label 
-                    Content="Password:" 
-                    HorizontalContentAlignment="Right" 
-                    Background="blue" 
-                    Grid.Column="0"
-                    FontSize="20"
-                    Name="lblLoginPassword"/>
-                <TextBox 
-                    Background="green"
-                    Grid.Column="1"
-                    Name="txtLoginrPassword"/>
-            </Grid>
-
-            <Button 
-                Content="Register" 
-                Width="100"
-                Height="45"
-                Name="btnLoginLogin"/>
-
-        </StackPanel>
-    **Listings Feed**
-        <StackPanel
-            Name="screenListingsFeed"
-            Background="Blue"
-            Visibility="Hidden"
-            >
-            <ListView Name="listListingsFeed" Background="Gray"/>
-            <Button 
-                Background="Red"
-                Content="Button"
-                />
-        </StackPanel>
-      **Listing**
-        <StackPanel
-            Name="screenListing"
-            Background="Red"
-            Visibility="Hidden"
-            >
-            <Label 
-                Name="lblListingTitle"
-                Content="*TITLE*"
-                HorizontalContentAlignment="Center"
-                Background="Gray"
-                />
-            <Label 
-                Name="lblListingMessage"
-                Content="*MESSAGE*"
-                HorizontalContentAlignment="Center"
-                Background="White"
-                />
-            <Button 
-                Name="btnListingContact"
-                Background="Gray"
-                Content="*CONTACT BUTTON*"
-                    />
-
-        </StackPanel>
-    **Conversation**
-        <StackPanel
-            Background="Blue"
-            Name="screenConversation"
-            Visibility="Hidden"
-            >
-            <ListView
-                Name="listConversation"
-                Background="Gray"
-                >
-
-            </ListView>
-        </StackPanel>
-    </Grid>
-    -->
     <Grid Name="containerWrapper">
         <!--Menu Bar-->
         <Grid Name="containerMenu">
@@ -204,21 +19,30 @@
                         <MenuItem Header="Register" Click="MenuItem_Click" Name="menuScreenRegister"/>
                         <MenuItem Header="Feed" Click="MenuItem_Click" Name="menuScreenFeed"/>
                         <MenuItem Header="Conversation" Click="MenuItem_Click" Name="menuScreenConversation"/>
+                        <MenuItem Header="Create Listing" Click="MenuItem_Click" Name="menuScreenCreateListing"/>
+                        <MenuItem Header="Conversations" Click="MenuItem_Click" Name="menuScreenConversations"/>
                     </MenuItem>
                 </Menu>
-                <StackPanel></StackPanel>
             </DockPanel>
         </Grid>
         <Grid 
             Name="containerScreens" 
             Background="Gray"
-            Margin="0, 20, 0, 0">
+            Margin="0, 20, 0, 0"
+            IsEnabled="False"
+            Visibility="Hidden">
             <!--Screens-->
-            <controls:LoginControl Visibility="Hidden" x:Name="controlLogin"/>
-            <controls:RegisterControl Visibility="Hidden" x:Name="controlRegister"/>
-            <controls:ConversationControl Visibility="Visible" x:Name="controlConversation" IsEnabled="False"/>
+            <controls:ConversationControl Visibility="Hidden" x:Name="controlConversation" IsEnabled="False"/>
             <controls:ListingControl Visibility="Hidden" x:Name="controlListing"/>
             <controls:ListingsFeedControl Visibility="Hidden" x:Name="controlListingsFeed"/>
+            <controls:CreateListingControl Visibility="Hidden" x:Name="controlCreateListing"/>
+            <controls:ConversationsControl Visibility="Hidden" x:Name="controlConversations"/>
         </Grid>
+        <Grid x:Name="containerLogin">
+            <!--Login | Signup-->
+            <controls:LoginControl Visibility="Visible" x:Name="controlLogin"/>
+            <controls:RegisterControl Visibility="Hidden" x:Name="controlRegister"/>
+        </Grid>
+
     </Grid>
 </Window>

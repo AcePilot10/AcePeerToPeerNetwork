@@ -1,5 +1,7 @@
 ﻿using AcePeerToPeerNetwork.Models;
 using AcePeerToPeerNetwork.Util;
+using AcePeerToPeerNetwork.Views.Controls;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,9 +72,40 @@ namespace AcePeerToPeerNetwork.Managers
         /// Updates database on conversation
         /// </summary>
         /// <param name="conversation"></param>
-        public async void UpdateConversation(Conversation conversation)
+        public async Task<SetResponse> UpdateConversation(Conversation conversation)
         {
-            await DatabaseAccessor.Instance.SetObjectToDatabase("Conversations/" + conversation.uid, conversation);
+            var response = await DatabaseAccessor.Instance.SetObjectToDatabase("Conversations/" + conversation.uid, conversation);
+            return response;
+        }
+
+        /// <summary>
+        /// Gets all conversations involving the currently logged in user
+        /// </summary>
+        /// <returns>List of conversations</returns>
+        public async Task<List<Conversation>> GetConversationsFromCurrentUser()
+        {
+            int count = DatabaseAccessor.Instance.GetClient().Get("Conversations/Count").ResultAs<int>();
+            List<Conversation> conversations = new List<Conversation>();
+            for (int i = 1; i <= count; i++)
+            {
+                var response = await DatabaseAccessor.Instance.GetClient().GetAsync("Conversations/" + i);
+                Conversation conversation = response.ResultAs<Conversation>();
+                if (conversation.Inquirer.UID == UserManager.Instance.currentUser.UID || conversation.Poster.UID == UserManager.Instance.currentUser.UID)
+                {
+                    conversations.Add(conversation);
+                }
+            }
+            return conversations;
+        }
+
+        /// <summary>
+        /// Shows a conversation
+        /// </summary>
+        /// <param name="conversation">The conversation to view</param>
+        public void ShowConversation(Conversation conversation)
+        {
+            ConversationControl.Instance.CurrentConversation = conversation;
+            MainWindow.Instance.ShowScreen(MainWindow.ScreenType.CONVERSATION);
         }
     }
 }

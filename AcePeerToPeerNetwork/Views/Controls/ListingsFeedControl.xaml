@@ -13,9 +13,9 @@
         <ListView Name="listListingsFeed" Background="Gray">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="Poster" DisplayMemberBinding="{Binding Poster.Username}"/>
-                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}"/>
+                    <GridViewColumn Width="265" Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Width="265" Header="Poster" DisplayMemberBinding="{Binding Poster.Username}"/>
+                    <GridViewColumn Width="260.5" Header="Message" DisplayMemberBinding="{Binding Message}"/>
                 </GridView>
             </ListView.View>
             <ListViewItem>Test Item</ListViewItem>

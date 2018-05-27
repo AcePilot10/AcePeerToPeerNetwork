@@ -15,11 +15,11 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <ListView
-                    Name="listConversation"
-                    Background="Gray">
+                Name="listConversation"
+                Background="Gray">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn  Header="Message" DisplayMemberBinding="{Binding Message.Message}"/>
+                        <GridViewColumn Width="800" Header="Message" DisplayMemberBinding="{Binding Message.Message}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

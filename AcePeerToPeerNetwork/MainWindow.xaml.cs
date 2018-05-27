@@ -33,7 +33,6 @@ namespace AcePeerToPeerNetwork
         #region Window
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ShowScreen(ScreenType.LOGIN);
             UserManager.Instance.SyncDatabase();
             ListingManager.Instance.SyncDatabase();
         }
@@ -43,17 +42,7 @@ namespace AcePeerToPeerNetwork
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            if (item == menuScreenLogin)
-            {
-                ShowScreen(ScreenType.LOGIN);
-            }
-
-            else if (item == menuScreenRegister)
-            {
-                ShowScreen(ScreenType.REGISTER);
-            }
-
-            else if (item == menuScreenFeed)
+            if (item == menuScreenFeed)
             {
                 ShowScreen(ScreenType.LISTING_FEED);
             }
@@ -61,6 +50,16 @@ namespace AcePeerToPeerNetwork
             else if (item == menuScreenConversation)
             {
                 ShowScreen(ScreenType.CONVERSATION);
+            }
+
+            else if (item == menuScreenCreateListing)
+            {
+                ShowScreen(ScreenType.CREATE_LISTING);
+            }
+
+            else if (item == menuScreenConversations)
+            {
+                ShowScreen(ScreenType.CONVERSATIONS);
             }
         }
 
@@ -72,8 +71,8 @@ namespace AcePeerToPeerNetwork
             CONVERSATION,
             LISTING_FEED,
             LISTING,
-            LOGIN,
-            REGISTER
+            CREATE_LISTING,
+            CONVERSATIONS
         }
         private void CloseAllScreens()
         {
@@ -97,11 +96,11 @@ namespace AcePeerToPeerNetwork
                 case ScreenType.LISTING_FEED:
                     controlListingsFeed.Visibility = Visibility.Visible;
                     break;
-                case ScreenType.LOGIN:
-                    controlLogin.Visibility = Visibility.Visible;
+                case ScreenType.CREATE_LISTING:
+                    controlCreateListing.Visibility = Visibility.Visible;
                     break;
-                case ScreenType.REGISTER:
-                    controlRegister.Visibility = Visibility.Visible;
+                case ScreenType.CONVERSATIONS:
+                    controlConversations.Visibility = Visibility.Visible;
                     break;
             }
         }

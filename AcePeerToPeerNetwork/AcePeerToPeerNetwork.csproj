@@ -100,11 +100,18 @@
     <Compile Include="Models\Listing.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Util\DatabaseAccessor.cs" />
+    <Compile Include="ViewModels\ConversationListItemViewModel.cs" />
     <Compile Include="ViewModels\ConversationViewModel.cs" />
     <Compile Include="ViewModels\IndividualListingViewModel.cs" />
     <Compile Include="ViewModels\ListingViewModel.cs" />
     <Compile Include="Views\Controls\ConversationControl.xaml.cs">
       <DependentUpon>ConversationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ConversationsControl.xaml.cs">
+      <DependentUpon>ConversationsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\CreateListingControl.xaml.cs">
+      <DependentUpon>CreateListingControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Controls\ListingControl.xaml.cs">
       <DependentUpon>ListingControl.xaml</DependentUpon>
@@ -131,6 +138,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Controls\ConversationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ConversationsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\CreateListingControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

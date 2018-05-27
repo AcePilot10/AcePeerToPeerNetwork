@@ -69,7 +69,7 @@ namespace AcePeerToPeerNetwork.Views.Controls
         }
 
         #region Listeners
-        private void btnSendMessage_Click(object sender, RoutedEventArgs e)
+        private async void btnSendMessage_Click(object sender, RoutedEventArgs e)
         {
             string text = txtMessageInput.Text;
             ConversationMessage msg = new ConversationMessage()
@@ -79,7 +79,7 @@ namespace AcePeerToPeerNetwork.Views.Controls
             };
             model.Conversation.Messages.Add(msg);
 
-            ConversationManager.Instance.UpdateConversation(model.Conversation);
+            await ConversationManager.Instance.UpdateConversation(model.Conversation);
 
             Conversation conversation = ConversationManager.Instance.GetConversation(model.Conversation.uid);
 
