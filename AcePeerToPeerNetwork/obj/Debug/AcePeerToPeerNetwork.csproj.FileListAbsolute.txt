@@ -1,0 +1,81 @@
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.exe.config
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.exe
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.pdb
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csprojAssemblyReference.cache
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\MainWindow.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\LoginControl.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\App.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork_MarkupCompile.cache
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork_MarkupCompile.lref
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\MainWindow.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\LoginControl.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.g.resources
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.Properties.Resources.resources
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.GenerateResource.cache
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.CoreCompileInputs.cache
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.exe
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.pdb
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ConversationControl.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingControl.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingsFeedControl.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\RegisterControl.g.cs
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ConversationControl.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingControl.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingsFeedControl.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\RegisterControl.baml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\FireSharp.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.App.config
+C:\Users\codyj\Documents\MSDN\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.CopyComplete
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.exe.config
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.exe
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\AcePeerToPeerNetwork.pdb
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\FireSharp.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Extensions.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Primitives.dll
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Extensions.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\bin\Debug\System.Net.Http.Primitives.xml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.App.config
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\MainWindow.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ConversationControl.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingControl.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingsFeedControl.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\LoginControl.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\RegisterControl.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\App.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork_MarkupCompile.cache
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork_MarkupCompile.lref
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\MainWindow.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ConversationControl.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingControl.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\ListingsFeedControl.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\LoginControl.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\Views\Controls\RegisterControl.baml
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.g.resources
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.Properties.Resources.resources
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.GenerateResource.cache
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.CoreCompileInputs.cache
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.csproj.CopyComplete
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.exe
+D:\Documents\MSDN Projects\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\AcePeerToPeerNetwork.pdb

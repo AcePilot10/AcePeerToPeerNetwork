@@ -1,0 +1,4 @@
+
+*.lock
+
+*.storage.ide-wal
