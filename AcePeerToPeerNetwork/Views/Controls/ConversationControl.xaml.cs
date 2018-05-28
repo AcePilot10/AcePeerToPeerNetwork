@@ -9,7 +9,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -53,14 +55,10 @@ namespace AcePeerToPeerNetwork.Views.Controls
             Instance = this;
         }
 
-        private async void RefreshConversation()
+        private void RefreshConversation()
         {
-            FirebaseClient client = DatabaseAccessor.Instance.GetClient();
-            EventStreamResponse response = await DatabaseAccessor.Instance.GetClient().OnAsync("Conoversations", (sender, args, context) => {
-                model.Conversation = ConversationManager.Instance.GetConversation(model.Conversation.uid);
-                MessageBox.Show("Conversation detected refresh");
-            });
-
+            if (model == null) return;
+            if (listConversation.Items.Count == model.MessageViewModels.Count) return;
             listConversation.Items.Clear();
             foreach (var message in model.MessageViewModels)
             {

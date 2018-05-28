@@ -51,6 +51,13 @@
             Height="45"
             Name="btnLoginLogin"
             Click="btnLoginLogin_Click"/>
+        <Button 
+            Content="Register" 
+            Name="btnRegister"
+            Width="100"
+            Height="45"
+            Click="btnRegister_Click"
+            />
     </StackPanel>
 
 </UserControl>

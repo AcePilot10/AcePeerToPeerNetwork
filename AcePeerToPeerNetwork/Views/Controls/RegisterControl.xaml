@@ -29,7 +29,6 @@
                     Grid.Column="1"
                     Name="txtRegisterEmail"/>
         </Grid>
-
         <Grid Name="gridRegisterUsername">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -67,10 +66,19 @@
         </Grid>
 
         <Button 
-                Content="Register" 
-                Width="100"
-                Height="45"
-                Name="btnRegisterRegister"/>
+            Content="Register" 
+            Width="100"
+            Height="45"
+            Name="btnRegisterRegister"
+            Click="btnRegisterRegister_Click"/>
+        
+        <Button 
+            Content="Sign In" 
+            Name="btnSignIn"
+            Width="100"
+            Height="45"
+            Click="btnSignIn_Click"
+            />
 
     </StackPanel>
 </UserControl>

@@ -51,5 +51,10 @@ namespace AcePeerToPeerNetwork.Views.Controls
             txtLoginPassword.Clear();
             txtLoginEmail.Focus();
         }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Instance.ShowScreen(MainWindow.ScreenType.REGISTER);
+        }
     }
 }

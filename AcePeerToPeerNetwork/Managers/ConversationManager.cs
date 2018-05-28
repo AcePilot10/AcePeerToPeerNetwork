@@ -44,7 +44,7 @@ namespace AcePeerToPeerNetwork.Managers
         /// <param name="inquierer">The inquirer</param>
         /// <param name="poster">The poster</param>
         /// <returns>The conversation between the two users</returns>
-        public Conversation GetConversationByName(User inquierer, User poster)
+        public async Task<Conversation> GetConversationByName(User inquierer, User poster)
         {
             int count = DatabaseAccessor.Instance.GetClient().Get("Conversations/Count").ResultAs<int>();
             for (int i = 1; i <= count; i++)
@@ -55,7 +55,18 @@ namespace AcePeerToPeerNetwork.Managers
                     return conversation;
                 }
             }
-            return null;
+
+            //Conversation doesn't exist yet
+            Conversation newConvo = new Conversation()
+            {
+                Inquirer = inquierer,
+                Poster = poster,
+                Messages = new List<ConversationMessage>(),
+                uid = count + 1
+            };
+            await DatabaseAccessor.Instance.SetObjectToDatabase("Conversations/" + (count + 1), newConvo);
+            await DatabaseAccessor.Instance.SetObjectToDatabase("Conversations/Count", count + 1);
+            return newConvo;
         }
 
         /// <summary>

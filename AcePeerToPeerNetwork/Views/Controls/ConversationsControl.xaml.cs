@@ -32,6 +32,7 @@ namespace AcePeerToPeerNetwork.Views.Controls
 
         private async void RefreshConversations()
         {
+            if (UserManager.Instance.currentUser == null) return;
             listConversations.Items.Clear();
             List<Conversation> conversations = await ConversationManager.Instance.GetConversationsFromCurrentUser();
             foreach (Conversation conversation in conversations)

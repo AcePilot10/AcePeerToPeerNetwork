@@ -52,9 +52,12 @@ namespace AcePeerToPeerNetwork.Managers
         /// <summary>
         /// Registers a new user
         /// </summary>
-        public void RegisterUser(User user)
+        public async void RegisterUser(User user)
         {
-
+            await DatabaseAccessor.Instance.SaveObjectToDatabase("Users", user);
+            SyncDatabase();
+            MessageBox.Show("Succesfully registered " + user.Username);
+            LoginUser(user);
         }
        
         /// <summary>
@@ -63,6 +66,9 @@ namespace AcePeerToPeerNetwork.Managers
         public void LoginUser(User user)
         {
             currentUser = user;
+            MainWindow.Instance.containerLogin.Visibility = Visibility.Hidden;
+            MainWindow.Instance.containerScreens.Visibility = Visibility.Visible;
+            MainWindow.Instance.containerScreens.IsEnabled = true;
             MainWindow.Instance.ShowScreen(MainWindow.ScreenType.LISTING_FEED);
             MessageBox.Show("Welcome, " + user.Username); ;
         }
@@ -87,6 +93,15 @@ namespace AcePeerToPeerNetwork.Managers
         {
             var users = GetUsers();
             return users.SingleOrDefault(x => x.Email == email);
+        }
+
+        /// <summary>
+        /// Generates a random user ID
+        /// </summary>
+        /// <returns>Random UID</returns>
+        public int GenerateUID()
+        {
+            return new Random().Next(0, 1000);
         }
         #region Database
         /// <summary>

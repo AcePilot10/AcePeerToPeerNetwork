@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AcePeerToPeerNetwork.Managers;
+using AcePeerToPeerNetwork.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace AcePeerToPeerNetwork.Views.Controls
         public RegisterControl()
         {
             InitializeComponent();
+        }
+
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Instance.ShowScreen(MainWindow.ScreenType.LOGIN);
+        }
+
+        private void btnRegisterRegister_Click(object sender, RoutedEventArgs e)
+        {
+            string email = txtRegisterEmail.Text;
+            string username = txtRegisterUsername.Text;
+            string password = txtRegisterPassword.Text;
+            int uid = UserManager.Instance.GenerateUID();
+            User user = new User()
+            {
+                Email = email,
+                Password = password,
+                UID = uid,
+                Username = username
+            };
+            UserManager.Instance.RegisterUser(user);
         }
     }
 }

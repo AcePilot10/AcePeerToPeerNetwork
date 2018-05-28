@@ -1,4 +1,6 @@
 ﻿using AcePeerToPeerNetwork.Models;
+using AcePeerToPeerNetwork.Util;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +21,22 @@ namespace AcePeerToPeerNetwork.ViewModels
             Conversation = conversation;
             MessageViewModels = new List<ConversationMessageViewModel>();
             UpdateModel();
+            //InitMessageListener();
+        }
+
+        private async void InitMessageListener()
+        {
+            string path = "Conversations/" + Conversation.uid;
+            EventStreamResponse eventResponse = await DatabaseAccessor.Instance.GetClient().OnAsync(path, (sender, args, context) =>
+            {
+                var response = DatabaseAccessor.Instance.GetClient().GetAsync(args.Path);
+                Conversation conversation = response.Result.ResultAs<Conversation>();
+
+                foreach (ConversationMessage msg in conversation.Messages)
+                {
+
+                }
+            });
         }
 
         /// <summary>
@@ -26,6 +44,7 @@ namespace AcePeerToPeerNetwork.ViewModels
         /// </summary>
         public void UpdateModel()
         {
+            if (Conversation.Messages == null) Conversation.Messages = new List<ConversationMessage>();
             MessageViewModels.Clear();
             foreach (ConversationMessage msg in Conversation.Messages)
             {

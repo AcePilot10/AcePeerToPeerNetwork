@@ -51,9 +51,9 @@ namespace AcePeerToPeerNetwork.Views.Controls
             DataContext = new IndividualListingViewModel(CurrentListing);
         }
 
-        private void btnListingContact_Click(object sender, RoutedEventArgs e)
+        private async void btnListingContact_Click(object sender, RoutedEventArgs e)
         {
-            Conversation conversation = ConversationManager.Instance.GetConversationByName(UserManager.Instance.currentUser, CurrentListing.Poster);
+            Conversation conversation = await ConversationManager.Instance.GetConversationByName(UserManager.Instance.currentUser, CurrentListing.Poster);
             ConversationControl.Instance.CurrentConversation = conversation;
             MainWindow.Instance.ShowScreen(MainWindow.ScreenType.CONVERSATION);
         }

@@ -14,14 +14,9 @@
         <Grid Name="containerMenu">
             <DockPanel>
                 <Menu DockPanel.Dock="Top">
-                    <MenuItem Header="Screen">
-                        <MenuItem Header="Login" Click="MenuItem_Click" Name="menuScreenLogin"/>
-                        <MenuItem Header="Register" Click="MenuItem_Click" Name="menuScreenRegister"/>
-                        <MenuItem Header="Feed" Click="MenuItem_Click" Name="menuScreenFeed"/>
-                        <MenuItem Header="Conversation" Click="MenuItem_Click" Name="menuScreenConversation"/>
-                        <MenuItem Header="Create Listing" Click="MenuItem_Click" Name="menuScreenCreateListing"/>
-                        <MenuItem Header="Conversations" Click="MenuItem_Click" Name="menuScreenConversations"/>
-                    </MenuItem>
+                    <MenuItem Header="Feed" Click="MenuItem_Click" Name="menuScreenFeed"/>
+                    <MenuItem Header="Create Listing" Click="MenuItem_Click" Name="menuScreenCreateListing"/>
+                    <MenuItem Header="Conversations" Click="MenuItem_Click" Name="menuScreenConversations"/>
                 </Menu>
             </DockPanel>
         </Grid>
@@ -32,17 +27,16 @@
             IsEnabled="False"
             Visibility="Hidden">
             <!--Screens-->
-            <controls:ConversationControl Visibility="Hidden" x:Name="controlConversation" IsEnabled="False"/>
+            <controls:ConversationControl Visibility="Hidden" x:Name="controlConversation"/>
             <controls:ListingControl Visibility="Hidden" x:Name="controlListing"/>
             <controls:ListingsFeedControl Visibility="Hidden" x:Name="controlListingsFeed"/>
             <controls:CreateListingControl Visibility="Hidden" x:Name="controlCreateListing"/>
             <controls:ConversationsControl Visibility="Hidden" x:Name="controlConversations"/>
         </Grid>
-        <Grid x:Name="containerLogin">
+        <Grid x:Name="containerLogin" Background="White">
             <!--Login | Signup-->
             <controls:LoginControl Visibility="Visible" x:Name="controlLogin"/>
             <controls:RegisterControl Visibility="Hidden" x:Name="controlRegister"/>
         </Grid>
-
     </Grid>
 </Window>

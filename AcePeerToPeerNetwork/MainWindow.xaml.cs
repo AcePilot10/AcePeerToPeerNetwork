@@ -1,6 +1,8 @@
 ﻿using AcePeerToPeerNetwork.Managers;
 using AcePeerToPeerNetwork.Models;
 using AcePeerToPeerNetwork.Util;
+using FireSharp.EventStreaming;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +27,10 @@ namespace AcePeerToPeerNetwork
         #endregion
         public MainWindow()
         {
-            UserManager.Instance.currentUser = UserManager.Instance.users.ElementAt(0);
             InitializeComponent();
             Instance = this;
         }
+
         #region Listeners
         #region Window
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -38,18 +40,12 @@ namespace AcePeerToPeerNetwork
         }
         #endregion
         #region Menu
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
             if (item == menuScreenFeed)
             {
                 ShowScreen(ScreenType.LISTING_FEED);
-            }
-
-            else if (item == menuScreenConversation)
-            {
-                ShowScreen(ScreenType.CONVERSATION);
             }
 
             else if (item == menuScreenCreateListing)
@@ -62,7 +58,6 @@ namespace AcePeerToPeerNetwork
                 ShowScreen(ScreenType.CONVERSATIONS);
             }
         }
-
         #endregion
         #endregion
         #region Screen Util
@@ -72,7 +67,9 @@ namespace AcePeerToPeerNetwork
             LISTING_FEED,
             LISTING,
             CREATE_LISTING,
-            CONVERSATIONS
+            CONVERSATIONS,
+            LOGIN,
+            REGISTER
         }
         private void CloseAllScreens()
         {
@@ -101,6 +98,14 @@ namespace AcePeerToPeerNetwork
                     break;
                 case ScreenType.CONVERSATIONS:
                     controlConversations.Visibility = Visibility.Visible;
+                    break;
+                case ScreenType.LOGIN:
+                    controlRegister.Visibility = Visibility.Hidden;
+                    controlLogin.Visibility = Visibility.Visible;
+                    break;
+                case ScreenType.REGISTER:
+                    controlRegister.Visibility = Visibility.Visible;
+                    controlLogin.Visibility = Visibility.Hidden;
                     break;
             }
         }
