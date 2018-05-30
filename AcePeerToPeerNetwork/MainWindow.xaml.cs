@@ -31,12 +31,19 @@ namespace AcePeerToPeerNetwork
             Instance = this;
         }
 
+        private void DebugLogin()
+        {
+            UserManager.Instance.LoginUser(UserManager.Instance.GetUser(1));
+            ShowScreen(ScreenType.CONVERSATIONS);
+        }
+
         #region Listeners
         #region Window
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             UserManager.Instance.SyncDatabase();
             ListingManager.Instance.SyncDatabase();
+            DebugLogin();
         }
         #endregion
         #region Menu

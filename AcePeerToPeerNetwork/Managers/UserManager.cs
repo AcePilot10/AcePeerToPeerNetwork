@@ -72,7 +72,7 @@ namespace AcePeerToPeerNetwork.Managers
             MainWindow.Instance.ShowScreen(MainWindow.ScreenType.LISTING_FEED);
             MessageBox.Show("Welcome, " + user.Username); ;
         }
-        #endregion
+
         /// <summary>
         /// Retrieves a user by their ID
         /// </summary>
@@ -103,6 +103,7 @@ namespace AcePeerToPeerNetwork.Managers
         {
             return new Random().Next(0, 1000);
         }
+        #endregion
         #region Database
         /// <summary>
         /// Synchronizes the local users list with the database.

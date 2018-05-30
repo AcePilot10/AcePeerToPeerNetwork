@@ -42,7 +42,7 @@ namespace AcePeerToPeerNetwork.Views.Controls
 
             await ListingManager.Instance.CreateListing(listing);
 
-            MessageBox.Show("Succesfully create listing!");
+            MessageBox.Show("Succesfully created listing!");
 
             ResetFields();
 

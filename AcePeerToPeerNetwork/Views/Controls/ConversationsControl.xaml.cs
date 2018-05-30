@@ -18,43 +18,27 @@ using System.Windows.Shapes;
 
 namespace AcePeerToPeerNetwork.Views.Controls
 {
-    /// <summary>
-    /// Interaction logic for ConversationsControl.xaml
-    /// </summary>
     public partial class ConversationsControl : UserControl
     {
+
+        private ConversationsViewModel model;
+
         public ConversationsControl()
         {
             InitializeComponent();
-            DataContext = new ConversationListItemViewModel();
-            RefreshConversations();
-        }
-
-        private async void RefreshConversations()
-        {
-            if (UserManager.Instance.currentUser == null) return;
-            listConversations.Items.Clear();
-            List<Conversation> conversations = await ConversationManager.Instance.GetConversationsFromCurrentUser();
-            foreach (Conversation conversation in conversations)
-            {
-                DataContext = new ConversationListItemViewModel()
-                {
-                    Conversation = conversation
-                };
-
-                listConversations.Items.Add(DataContext);
-            }
+            model = new ConversationsViewModel();
+            DataContext = model;
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            RefreshConversations();
+            model.RefreshConversations();
         }
 
         private void btnMessage_Click(object sender, RoutedEventArgs e)
         {
-            ConversationListItemViewModel conversationModel = (ConversationListItemViewModel)listConversations.SelectedItem;
-            ConversationManager.Instance.ShowConversation(conversationModel.Conversation);
+            Conversation conversation = listConversations.SelectedItem as Conversation;
+            ConversationManager.Instance.ShowConversation(conversation);
         }
     }
 }

@@ -29,22 +29,12 @@ namespace AcePeerToPeerNetwork.Views.Controls
         {
             InitializeComponent();
             model = new ListingViewModel();
-            RefreshList();
-        }
-
-        private void RefreshList()
-        {
-            listListingsFeed.Items.Clear();
-            List<Listing> listings = model.GetListings();
-            foreach (Listing listing in listings)
-            {
-                listListingsFeed.Items.Add(listing);
-            }
+            DataContext = model;
         }
 
         private void btnListingFeedRefresh_Click(object sender, RoutedEventArgs e)
         {
-            RefreshList();
+            model.RefreshList();
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)

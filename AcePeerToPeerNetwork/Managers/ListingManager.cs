@@ -32,7 +32,7 @@ namespace AcePeerToPeerNetwork.Managers
         /// <summary>
         /// Synchronizes the local listings list and the database
         /// </summary>
-        public async void SyncDatabase()
+        public async Task SyncDatabase()
         {
             List<Listing> databaseListings = GetListings();
             foreach (Listing current in listings)
@@ -60,13 +60,20 @@ namespace AcePeerToPeerNetwork.Managers
         public async Task<PushResponse> CreateListing(Listing listing)
         {
              var response = await DatabaseAccessor.Instance.GetClient().PushAsync("Listings", listing);
-            return response;
+             return response;
         }
 
         /// <summary>
-        /// Returns a list of all listings
+        /// Generates a random id
         /// </summary>
-        /// <returns>A list of listings</returns>
+        /// <returns>ID</returns>
+        public int GenerateUID()
+        {
+            return new Random().Next(0, 1000);
+        }
+        #endregion
+
+        #region Private Functions
         private List<Listing> GetListings()
         {
             var response = DatabaseAccessor.Instance.GetClient().Get("Listings");
@@ -78,15 +85,6 @@ namespace AcePeerToPeerNetwork.Managers
             {
                 return new List<Listing>();
             }
-        }
-
-        /// <summary>
-        /// Generates a random id
-        /// </summary>
-        /// <returns>ID</returns>
-        public int GenerateUID()
-        {
-            return new Random().Next(0, 1000);
         }
         #endregion
     }

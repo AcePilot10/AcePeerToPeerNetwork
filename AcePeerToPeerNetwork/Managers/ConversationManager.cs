@@ -70,16 +70,6 @@ namespace AcePeerToPeerNetwork.Managers
         }
 
         /// <summary>
-        /// Sends a message to a conversation and saves to database. Conversation view will be updated automatically
-        /// </summary>
-        /// <param name="conversation">The conversation</param>
-        /// <param name="message">The text of the message</param>
-        public async void SendMessageToConversation(Conversation conversation, string message)
-        {
-            await DatabaseAccessor.Instance.SetObjectToDatabase("Conversations", conversation);
-        }
-
-        /// <summary>
         /// Updates database on conversation
         /// </summary>
         /// <param name="conversation"></param>

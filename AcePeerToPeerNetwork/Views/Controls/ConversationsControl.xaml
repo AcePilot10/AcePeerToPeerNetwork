@@ -13,19 +13,37 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ListView Name="listConversations" Background="Gray">
+        
+        <ListView 
+            Name="listConversations" 
+            Background="Gray"
+            ItemsSource="{Binding Conversations}">
+            <!--
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="400" Header="Poster" DisplayMemberBinding="{Binding Conversation.Poster.Username}"/>
                     <GridViewColumn Width="400" Header="Inquirer" DisplayMemberBinding="{Binding Conversation.Inquirer.Username}"/>
                 </GridView>
             </ListView.View>
-        </ListView>
+            -->
 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Poster.Username}"/>
+                        <Label Content="{Binding Inquirer.Username}"/>
+                    </StackPanel>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        
 
         <StackPanel Grid.Row="1">
             <Button Content="Message" Margin="5" Width="200" Name="btnMessage" Click="btnMessage_Click"/>
             <Button Content="Refresh" Margin="5" Width="200" Name="btnRefresh" Click="btnRefresh_Click"/>
         </StackPanel>
+       
     </Grid>
 </UserControl>

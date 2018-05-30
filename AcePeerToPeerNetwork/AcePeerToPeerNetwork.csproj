@@ -100,7 +100,7 @@
     <Compile Include="Models\Listing.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Util\DatabaseAccessor.cs" />
-    <Compile Include="ViewModels\ConversationListItemViewModel.cs" />
+    <Compile Include="ViewModels\ConversationsViewModel.cs" />
     <Compile Include="ViewModels\ConversationViewModel.cs" />
     <Compile Include="ViewModels\IndividualListingViewModel.cs" />
     <Compile Include="ViewModels\ListingViewModel.cs" />

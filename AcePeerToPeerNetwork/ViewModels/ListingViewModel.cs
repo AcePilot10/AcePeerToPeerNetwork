@@ -10,10 +10,25 @@ namespace AcePeerToPeerNetwork.ViewModels
 {
     public class ListingViewModel
     {
-        public List<Listing> GetListings()
+
+        public List<Listing> Listings { get; set; }
+
+        public ListingViewModel()
         {
-            ListingManager.Instance.SyncDatabase();
-            return ListingManager.Instance.listings;
+            Listings = new List<Listing>();
+            RefreshList();
+        }
+
+        public async void RefreshList()
+        {
+            await ListingManager.Instance.SyncDatabase();
+            foreach (Listing listing in ListingManager.Instance.listings)
+            {
+                if (!Listings.Exists(x => x.uid == listing.uid))
+                {
+                    Listings.Add(listing);
+                }
+            }
         }
     }
 }
