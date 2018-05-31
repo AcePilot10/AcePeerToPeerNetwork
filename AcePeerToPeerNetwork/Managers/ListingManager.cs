@@ -32,14 +32,14 @@ namespace AcePeerToPeerNetwork.Managers
         /// <summary>
         /// Synchronizes the local listings list and the database
         /// </summary>
-        public async Task SyncDatabase()
+        public void SyncDatabase()
         {
             List<Listing> databaseListings = GetListings();
             foreach (Listing current in listings)
             {
                 if (!databaseListings.Exists(x => x.uid == current.uid))
                 {
-                    await DatabaseAccessor.Instance.SaveObjectToDatabase("Listings", current);
+                    DatabaseAccessor.Instance.SaveObjectToDatabase("Listings", current);
                 }
             }
 

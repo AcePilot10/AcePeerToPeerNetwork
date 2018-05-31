@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Documents\MSDN Projects\AcePeerToPeerNetwork-Source\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\
+C:\Users\codyj\Documents\MSDN Projects\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\obj\Debug\
 AcePeerToPeerNetwork
 none
 false
 DEBUG;TRACE
-D:\Documents\MSDN Projects\AcePeerToPeerNetwork-Source\AcePeerToPeerNetwork\AcePeerToPeerNetwork\App.xaml
+C:\Users\codyj\Documents\MSDN Projects\C#\AcePeerToPeerNetwork\AcePeerToPeerNetwork\App.xaml
 8-759715604
 
 24190673953
-75192920606
+751558415078
 MainWindow.xaml;Views\Controls\ConversationControl.xaml;Views\Controls\ConversationsControl.xaml;Views\Controls\CreateListingControl.xaml;Views\Controls\ListingControl.xaml;Views\Controls\ListingsFeedControl.xaml;Views\Controls\LoginControl.xaml;Views\Controls\RegisterControl.xaml;
 
 False

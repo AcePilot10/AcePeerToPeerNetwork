@@ -44,7 +44,13 @@ namespace AcePeerToPeerNetwork.Util
         }
         #endregion
         #region Shared
-        public async Task<PushResponse> SaveObjectToDatabase(string path, Object obj)
+        public PushResponse SaveObjectToDatabase(string path, Object obj)
+        {
+            var response = client.Push(path, obj);
+            return response;
+        }
+
+        public async Task<PushResponse> SaveObjectToDatabaseAsync(string path, Object obj)
         {
             var response = await client.PushAsync(path, obj);
             return response;

@@ -54,7 +54,7 @@ namespace AcePeerToPeerNetwork.Managers
         /// </summary>
         public async void RegisterUser(User user)
         {
-            await DatabaseAccessor.Instance.SaveObjectToDatabase("Users", user);
+            await DatabaseAccessor.Instance.SaveObjectToDatabaseAsync("Users", user);
             SyncDatabase();
             MessageBox.Show("Succesfully registered " + user.Username);
             LoginUser(user);
@@ -115,7 +115,7 @@ namespace AcePeerToPeerNetwork.Managers
             {
                 if (!databaseUsers.Exists(x => x.Email == current.Email))
                 {
-                    await DatabaseAccessor.Instance.SaveObjectToDatabase("Users", current);
+                    await DatabaseAccessor.Instance.SaveObjectToDatabaseAsync("Users", current);
                 }
             }
 

@@ -2,6 +2,7 @@
 using AcePeerToPeerNetwork.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +11,22 @@ namespace AcePeerToPeerNetwork.ViewModels
 {
     public class ListingViewModel
     {
-
-        public List<Listing> Listings { get; set; }
+        public ObservableCollection<Listing> Listings { get; set; }
 
         public ListingViewModel()
         {
-            Listings = new List<Listing>();
+            Listings = new ObservableCollection<Listing>();
             RefreshList();
         }
 
-        public async void RefreshList()
+        public void RefreshList()
         {
-            await ListingManager.Instance.SyncDatabase();
+            ListingManager.Instance.SyncDatabase();
+
+            Listings.Clear();
             foreach (Listing listing in ListingManager.Instance.listings)
             {
-                if (!Listings.Exists(x => x.uid == listing.uid))
-                {
-                    Listings.Add(listing);
-                }
+                Listings.Add(listing);
             }
         }
     }

@@ -12,20 +12,12 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-           
+
         <ListView 
             Name="listListingsFeed" 
             Background="Gray"
             ItemsSource="{Binding Listings}">
-                <!--    <ListView.View>
-                 <GridView>
-                    <GridViewColumn Width="265" Header="Title" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Width="265" Header="Poster" DisplayMemberBinding="{Binding Poster.Username}"/>
-                    <GridViewColumn Width="260.5" Header="Message" DisplayMemberBinding="{Binding Message}"/>
-                </GridView>
-            </ListView.View>
-            -->
-                <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel HorizontalAlignment="Center">
                             <Label Content="{Binding Title}"/>
